@@ -36,6 +36,18 @@ app.get('/', (req, res) => {
   res.render('form');
   });
   
+  // Dynamic route to view a single message detail
+app.get('/message/:id', (req, res) => {
+  const messageIndex = req.params.id;
+  
+  // Grab the specific message from your array using the index
+  const selectedMessage = messages[messageIndex];
+  
+  // Render a detail view and pass the selected message into it
+  res.render('message', { message: selectedMessage });
+});
+
+  
   app.post('/new', (req, res) => {
   const { messageUser, messageText } = req.body;
  // Push the new message into our array with a timestamp
