@@ -15,6 +15,8 @@
       <li>
         <strong><%= message.user %></strong>: <%= message.text %> 
         <em>(<%= message.added.toLocaleTimeString() %>)</em>
+<!-- Link pointing to a dynamic route using the array index -->
+      <a href="/message/<%= index %>">Open</a>
       </li>
     <% }) %>
   </ul>
