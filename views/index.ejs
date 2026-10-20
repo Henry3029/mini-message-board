@@ -11,7 +11,7 @@
   <hr>
 
   <ul>
-    <% messages.forEach((message) => { %>
+    <% messages.forEach((message, index) => { %>
       <li>
         <strong><%= message.user %></strong>: <%= message.text %> 
         <em>(<%= message.added.toLocaleTimeString() %>)</em>
