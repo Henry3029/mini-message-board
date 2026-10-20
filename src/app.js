@@ -29,7 +29,7 @@ const messages = [
 ];
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Mini MessageBox, messages: messages });
+  res.render('index', { title: 'Mini MessageBox', messages: messages })
   });
   
   app.get('/new', (req, res) => {
