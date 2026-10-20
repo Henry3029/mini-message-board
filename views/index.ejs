@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mini Message Board</title>
+  <title><%= title %></title>
 </head>
 <body>
-  <h1>Welcome</h1>
-  <!-- This is how you display the variable passed from index.js -->
-  <p><%= message %></p>
+  <h1><%= title %></h1>
+  
+  <a href="/new">Add a new message</a>
+  <hr>
+
+  <ul>
+    <% messages.forEach((message) => { %>
+      <li>
+        <strong><%= message.user %></strong>: <%= message.text %> 
+        <em>(<%= message.added.toLocaleTimeString() %>)</em>
+      </li>
+    <% }) %>
+  </ul>
 </body>
 </html>

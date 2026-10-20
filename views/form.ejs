@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Message</title>
+</head>
+<body>
+  <h1>Send a New Message</h1>
+  
+  <form action="/new" method="POST">
+    <div>
+      <label for="messageUser">Author's Name:</label>
+      <input type="text" id="messageUser" name="messageUser" required>
+    </div>
+    <br>
+    <div>
+      <label for="messageText">Message Text:</label>
+      <textarea id="messageText" name="messageText" rows="4" required></textarea>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <br>
+  <a href="/">← Back to Home</a>
+</body>
+</html>
